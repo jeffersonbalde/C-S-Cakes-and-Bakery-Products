@@ -175,15 +175,15 @@ body {
   height: 300vh;
 }
 
-/* body.loaded { overflow: overlay; } */
+body.loaded { overflow: overlay; }
 
-/* body.nav-active { overflow: hidden; } */
+body.nav-active { overflow: hidden; }
 
-/* ::-webkit-scrollbar { width: 10px; } */
+::-webkit-scrollbar { width: 10px; }
 
-/* ::-webkit-scrollbar-track { background-color: transparent; } */
+::-webkit-scrollbar-track { background-color: transparent; }
 
-/* ::-webkit-scrollbar-thumb { background-color: var(--gold); } */
+::-webkit-scrollbar-thumb { background-color: var(--gold); }
 
 
 
@@ -291,6 +291,7 @@ body {
 
 .contact-number::after { bottom: -5px; }
 
+.text-center { text-align: center; }
 
 
 /* 
@@ -366,8 +367,6 @@ address { font-style: normal; }
   HEADER
 */
 
-
-.overlay,
 .header .btn {display: none;}
 
 .header {
@@ -384,7 +383,7 @@ address { font-style: normal; }
 
 .header.active {
   padding-block: 20px;
-  background-color: var(--eerie-black-4);
+  background-color: var(--yellow);
   border-color: var(--black-alpha-15);
 }
 
@@ -472,7 +471,7 @@ address { font-style: normal; }
 .navbar-item { border-block-start: 1px solid black; }
 
 .navbar-link {
-  position: relative;
+  position: relative; 
   font-size: var(--fontSize-label-2);
   text-transform: uppercase;
   padding-block: 10px;
@@ -498,3 +497,40 @@ address { font-style: normal; }
 }
 
 .navbar-link:is(:hover, :focus-visible, .active) .separator { opacity: 1; }
+
+.navbar-title { margin-block-end: 15px; }
+
+.navbar-text { margin-block: 10px; }
+
+.navbar .body-4 { color: black; }
+
+.sidebar-link { transition: var(--transition-1); }
+
+.sidebar-link:is(:hover, :focus-visible) { color: var(--gold-crayola); }
+
+.navbar .text-center .separator {
+  margin-block: 30px;
+  margin-inline: auto;
+}
+
+.navbar .contact-label { margin-block-end: 10px; }
+
+.navbar::-webkit-scrollbar-thumb { background-color: var(--white-alpha-10); }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--black-alpha-80);
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition-2);
+  z-index: 1;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
