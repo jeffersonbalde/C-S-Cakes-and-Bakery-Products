@@ -51,6 +51,8 @@
     border-left: 30px solid #F3EECE;
     border-right: 30px solid #F3EECE;
     padding: 0 .7em;
+    box-shadow: -5px 8px 10px #aaaaaa;
+    /* box-shadow: 3px 8px 10px #aaaaaa; */
   }
 
 
@@ -1346,7 +1348,7 @@ address { font-style: normal; }
 .contact-numberr {
   color: white;
   font-size: 1.7rem;
-  font-family: var(--fontFamily-dm_sans);
+  font-family: var(--fontFamily-dm_sans);align-self: /;'/';
 }
 
 .contact-info {
@@ -1364,6 +1366,7 @@ address { font-style: normal; }
 .contact-number {
   font-weight: 400;
 }
+
 
 
 /* 
