@@ -1096,6 +1096,14 @@ address { font-style: normal; }
 }
 
 
+.about .about-container .lg-about-btn {
+  align-self: flex-start;
+  margin-bottom: 1.2em;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+
 /* media queries */
 
 
@@ -1340,7 +1348,7 @@ address { font-style: normal; }
 .large-screen-topbar {
   background-color: #E5C772;
   padding: 0 2em;
-  display: flex;
+  display: flex;  
   align-items: center;
   height: 40px;
 }
@@ -1348,7 +1356,7 @@ address { font-style: normal; }
 .contact-numberr {
   color: white;
   font-size: 1.7rem;
-  font-family: var(--fontFamily-dm_sans);align-self: /;'/';
+  font-family: var(--fontFamily-dm_sans);
 }
 
 .contact-info {
@@ -1365,6 +1373,12 @@ address { font-style: normal; }
 
 .contact-number {
   font-weight: 400;
+}
+
+
+.large-screen-topbar a {
+  cursor: pointer;  
+  z-index: 100;
 }
 
 
@@ -1729,4 +1743,237 @@ address { font-style: normal; }
   justify-content: flex-start;
   flex-basis: 600px;
   gap: .5em;
+}
+
+
+
+/* 
+
+  FOOTER SMALL SCREEN
+
+*/
+
+
+.footer {
+  background-color: #E5C772;
+  color: white;
+  
+}
+
+
+.footer-txt {
+  font-size: 1.7rem;
+  font-family: var(--fontFamily-dm_sans);
+  font-weight: 600;
+  text-align: center;
+}
+
+
+.lg-footer-txt {
+  font-size: 1.9rem;
+  font-family: var(--fontFamily-dm_sans);
+  font-weight: 600;
+  text-align: center;
+}
+
+
+.footer-txt a {
+  display: inline;
+  text-decoration: underline;   
+}
+
+.lg-footer-txt a {
+  display: inline;
+  text-decoration: underline;   
+}
+
+
+.footer-wrapper {
+  padding: .5em 2.4em;
+}
+
+.lg-footer-wrapper {
+  padding: .5em 2em;
+}
+
+/* 
+
+  GALLERY
+
+*/
+
+.cakes-add {
+  width: 40px;
+  z-index: 300;
+}
+
+
+.wrapper {
+  position: relative;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  /* background: white; */
+  /* background: #C7C7D1; */
+  background-color: #E5C772;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.6s;
+  opacity: 0;
+  gap: 2em;
+}
+
+.content-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  color: white;
+}
+
+.content-title h1 {
+  font-family: var(--fontFamily-dm_sans);
+  font-size: 2rem;
+  z-index: 300;
+}
+
+.content:hover {
+  opacity: 0.8;
+}
+
+.content h1,
+.content p {
+  /* color: #E5C772; */
+  color: white;
+  z-index: 200;
+  font-family: var(--fontFamily-dm_sans);
+  font-weight: 600;
+}
+
+.content p {
+  font-size: 2rem;
+}
+
+
+.content > * {
+  transform: translateY(25px);
+  transition: transform 0.6s;
+}
+
+.content:hover > * {
+  transform: translateY(0px);
+}
+
+
+.gallery {
+  font-size: 6rem;
+  text-align: center;
+  font-family: var(--fontFamily-dm_sans);
+  color: #E5C772;
+  padding-block-start: 3em;
+}
+
+.sm-gallery {
+  font-size: 4rem;
+  text-align: center;
+  font-family: var(--fontFamily-dm_sans);
+  color: #E5C772;
+  padding-block-start: 3.5em;
+
+}
+
+.lg-photo-gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+  justify-content: center;  
+}
+
+.sm-photo-gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+  justify-content: center;  
+}
+
+.lg-photo-gallery-container img {
+  width: 363px;
+  height: 274px;
+  background-size: cover;
+}
+
+.sm-photo-gallery-container img {
+  width: 265px;
+  height: 265px;
+  background-size: cover;
+}
+
+.lg-photo-gallery-wrapper {
+  padding: 5em 3em;
+}
+
+.sm-photo-gallery-wrapper {
+  padding: 3em 3em;
+}
+
+/* 
+
+
+  WEDDING CAKES
+
+
+*/
+
+.back-to-gallery {
+  text-align: center;
+  font-family: var(--fontFamily-dm_sans);
+  font-size: 2rem;
+  padding-block-start: 2em;
+  /* margin-bottom: -3em; */
+  text-decoration: underline;
+
+}
+
+.sm-back-to-gallery {
+  text-align: center;
+  font-family: var(--fontFamily-dm_sans);
+  font-size: 2rem;
+  padding-block-start: 2em;
+  /* margin-bottom: -3em; */
+  text-decoration: underline;
+}
+
+.lg-wedding-cake-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wedding-cake-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+  /* padding-block-start: 7em; */
+  padding: 2em;
+}
+
+.wedding-cake-gallery a img {
+  background-size: cover;
+}
+
+.wedding-cake-gallery img {
+  width: 100%;
+}
+
+.lg-wedding-cake-wrapper {
+  padding: 0 6.3em;
 }
